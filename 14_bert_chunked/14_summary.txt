@@ -1,0 +1,31 @@
+BERT chunked vs. opening-only robustness check
+==================================================
+
+Tracks scored: 2,019
+Chunk size: 500 tokens
+
+Overall metrics:
+  n: 2019
+  n_truncated: 1329
+  pct_truncated: 65.8
+  pearson_r: 0.9021
+  pearson_p: 0.00e+00
+  spearman_rho: 0.8812
+  spearman_p: 0.00e+00
+  mean_abs_diff: 0.1016
+  rmse: 0.1575
+  sign_agreement: 0.8826
+  n_flipped: 237
+  pct_flipped: 11.74
+
+By-language metrics:
+scope    n  n_truncated  pct_truncated  pearson_r pearson_p  spearman_rho spearman_p  mean_abs_diff   rmse  sign_agreement  n_flipped  pct_flipped
+   en 1489          888           59.6     0.9089  0.00e+00        0.8917   0.00e+00         0.0969 0.1569          0.8912        162        10.88
+   es  305          255           83.6     0.8741  5.12e-97        0.8543   4.15e-88         0.1132 0.1597          0.8820         36        11.80
+   de  225          186           82.7     0.8640  2.20e-68        0.8179   1.86e-55         0.1164 0.1585          0.8267         39        17.33
+
+By-language descriptive (opening vs chunked):
+language    n  opening_M  opening_SD  chunked_M  chunked_SD  median_n_tokens  median_n_chunks
+      de  225    -0.0760      0.3041    -0.0812      0.3048            663.0              2.0
+      en 1489    -0.0920      0.3720    -0.1001      0.3611            571.0              2.0
+      es  305    -0.2034      0.3279    -0.2058      0.3006            687.0              2.0

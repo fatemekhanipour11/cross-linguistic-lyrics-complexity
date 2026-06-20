@@ -1,0 +1,27 @@
+
+LYRICS ANALYSIS SUMMARY
+Generated: 2026-02-16 12:52:01
+==================================================
+
+DATASET OVERVIEW:
+- Total tracks: 2113
+- Unique languages detected: 18
+- Unique artists: 672
+
+LANGUAGE DISTRIBUTION (Top 10):
+language  count
+      en   1491
+      es    307
+      de    225
+      pt     29
+ unknown     15
+      it     12
+      fr     10
+      tr      4
+      id      4
+      ca      2
+
+OUTPUT FILES:
+- 04_lyrics_cleaned.csv: All tracks with language detection and cleaned columns
+
+============================================================

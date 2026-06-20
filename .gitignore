@@ -1,0 +1,104 @@
+############################
+# Python
+############################
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+############################
+# Virtual Environments
+############################
+venv/
+env/
+ENV/
+.venv/
+*.env
+
+############################
+# Jupyter Notebook
+############################
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+*.nbconvert.ipynb
+
+############################
+# Output / Experiment Results
+
+############################
+# Spotify downloaded charts
+01_download_spotify_charts/
+
+# Raw lyrics downloaded from LRCLIB
+03_download_lyrics_lrclib/03_lyrics_complete.csv
+
+# Cleaned lyrics text
+04_clean_lyrics_data/04_lyrics_cleaned.csv
+
+# Genius sentiment/enrichment data
+05_download_genius_data/track_sentiment_analysis(GeniusData).csv
+
+############################
+# Data (raw / sensitive / large files)
+############################
+data/raw/
+data/private/
+*.csv
+*.parquet
+*.json
+*.pkl
+*.pickle
+*.h5
+
+
+
+############################
+# IDEs
+############################
+.vscode/
+.idea/
+*.swp
+*.swo
+
+############################
+# OS files
+############################
+.DS_Store
+Thumbs.db
+
+############################
+# Python tooling
+############################
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+############################
+# Logs
+############################
+*.log
+
+############################
+# HuggingFace / NLP models cache
+############################
+.cache/
+huggingface/
+transformers_cache/
+models--*
+
+############################
+# Large ML frameworks cache
+############################
+lightning_logs/
+wandb/
+mlruns/
+
+############################
+# Temporary files
+############################
+*.tmp
+*.temp
+*.bak

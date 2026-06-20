@@ -1,0 +1,56 @@
+VADER ON LRCLIB - SAME-SOURCE COMPARISON WITH BERT
+Generated: 2026-05-08 16:02:39
+============================================================
+
+PURPOSE:
+  Address Reviewer 1 Comment 2: VADER and BERT must be applied to the
+  same lyrics source for a fair cross-method comparison. Original paper:
+    VADER on Genius, BERT on LRCLIB.
+  This script: VADER and BERT both on LRCLIB plain_lyrics.
+
+INPUTS:
+  Lyrics: 04_clean_lyrics_data/04_lyrics_cleaned.csv
+  BERT:   07_bert_sentiment/07_bert_sentiment_results.csv
+
+PROCESSING:
+  - Top-3 language filter (en/es/de)
+  - >= 50 words (same filter as script 07)
+  - VADER applied to plain_lyrics from LRCLIB
+  - Inner-merged with BERT scores on (track_name, artist)
+
+PER-LANGUAGE STATISTICS AND CORRELATIONS:
+
+  English:
+    n = 1489
+    VADER (LRCLIB):  M = 0.3172, SD = 0.8824, Mdn = 0.9543, % neg = 33.7
+    BERT (LRCLIB):   M = -0.0920, SD = 0.3720, Mdn = -0.1134, % neg = 61.3
+    Pearson  r = 0.3359  (p = 1.35e-40)
+    Spearman rho = 0.3493  (p = 5.82e-44)
+
+  Spanish:
+    n = 305
+    VADER (LRCLIB):  M = -0.5362, SD = 0.6968, Mdn = -0.9226, % neg = 78.0
+    BERT (LRCLIB):   M = -0.2034, SD = 0.3279, Mdn = -0.2419, % neg = 73.8
+    Pearson  r = 0.2792  (p = 7.25e-07)
+    Spearman rho = 0.3089  (p = 3.62e-08)
+
+  German:
+    n = 225
+    VADER (LRCLIB):  M = -0.7532, SD = 0.5129, Mdn = -0.9774, % neg = 88.4
+    BERT (LRCLIB):   M = -0.0760, SD = 0.3041, Mdn = -0.0995, % neg = 66.2
+    Pearson  r = 0.1200  (p = 7.24e-02)
+    Spearman rho = 0.1070  (p = 1.10e-01)
+
+  Pooled (3 langs):
+    n = 2019
+    VADER (LRCLIB):  M = 0.0690, SD = 0.9234, Mdn = 0.5574, % neg = 46.5
+    BERT (LRCLIB):   M = -0.1070, SD = 0.3608, Mdn = -0.1358, % neg = 63.7
+    Pearson  r = 0.3053  (p = 8.13e-45)
+    Spearman rho = 0.3197  (p = 3.23e-49)
+
+OUTPUT FILES:
+  12_vader_lrclib_results.csv      - VADER scores on LRCLIB per track
+  12_vader_vs_bert_comparison.csv  - per-language stats and correlations
+  12_vader_lrclib_kde.png          - KDE by language
+  12_vader_vs_bert_scatter.png     - scatter VADER (LRCLIB) vs BERT
+  12_summary.txt                   - this summary

@@ -1,0 +1,37 @@
+BERT validation on MoodyLyrics (Genius API)
+==================================================
+
+Source: Cano & Morisio (2017), ml_raw.xlsx
+Lyrics: Genius API (lyricsgenius package, search_song).
+Model: nlptown/bert-base-multilingual-uncased-sentiment
+
+MoodyLyrics tracks: 2,595
+Usable (>=50 words): 2,444
+
+Top-line metrics:
+  n: 2444
+  accuracy: 0.7148
+  precision_pos: 0.71
+  recall_pos: 0.8073
+  f1_pos: 0.7555
+  roc_auc: 0.7951
+  pointbiserial_r: 0.506
+  pointbiserial_p: 4.89e-159
+  spearman_rho: 0.509
+  spearman_p: 3.11e-161
+  TN: 670
+  FP: 440
+  FN: 257
+  TP: 1077
+
+By quadrant:
+   mood   n  bert_mean  bert_sd  bert_median  star_mean
+  angry 548    -0.0657   0.4198      -0.0623     2.8358
+  happy 772     0.4563   0.3927       0.5436     4.4573
+relaxed 562     0.2631   0.4039       0.3037     3.9573
+    sad 562    -0.1657   0.4290      -0.1894     2.4680
+
+Confusion matrix [rows=true, cols=pred]:
+          Neg(pred)  Pos(pred)
+Neg(true)       670        440
+Pos(true)       257       1077

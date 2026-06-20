@@ -1,0 +1,34 @@
+BASELINE SENTIMENT ANALYSIS SUMMARY
+Generated: 2026-02-16 13:27:34
+==================================================
+
+DATASET OVERVIEW:
+  Total songs: 2,113
+  Unique languages: 18
+  Songs with VADER sentiment (after merge): 1,833
+  Sentiment coverage: 86.7%
+
+MERGE QUALITY:
+  Genius script 05 had sentiment for: 1,904 tracks
+  Stage 1 matched (accent-normalized): 1,798
+  Stage 2 matched (aggressive normalization): 35
+  Total matched: 1,833
+  Unlinked (different tracks by same artist): 71
+
+TOP-3 LANGUAGE FOCUS:
+  Languages: English (en), Spanish (es), German (de)
+  Subset size: 2,023 (95.7%)
+
+CLASSIFICATION (of 1,833 classified songs):
+  Positive: 922 (50.3%)
+  Negative: 911 (49.7%)
+
+COMPOUND SCORE BY LANGUAGE:
+   English: n=1,312, M=0.2601, SD=0.8822, Mdn=0.9307
+   Spanish: n=246, M=-0.5798, SD=0.6673, Mdn=-0.9315
+    German: n=213, M=-0.7426, SD=0.5140, Mdn=-0.9757
+
+OUTPUT FILES:
+  01_compound_sentiment_kde_by_language.png
+  05_top3_languages_baseline_dataset.csv
+  06_analysis_summary.txt

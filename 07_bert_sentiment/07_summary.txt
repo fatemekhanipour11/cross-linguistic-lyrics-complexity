@@ -1,0 +1,34 @@
+BERT SENTIMENT ANALYSIS SUMMARY
+Generated: 2026-02-16 22:03:52
+==================================================
+
+MODEL: nlptown/bert-base-multilingual-uncased-sentiment
+DEVICE: cpu
+
+NOTE: BERT scores were computed on original plain_lyrics (not stopword-removed
+lyrics_cleaned) to preserve natural sentence structure for the transformer model.
+The lyrics_cleaned column is retained for downstream Zipf/DFA analyses (scripts 08-11).
+
+DATASET:
+  Input tracks: 2,023
+  After cleaning: 2,023
+  With BERT scores: 2,019
+
+BERT COMPOSITE SCORE BY LANGUAGE:
+   English: n=1,489, M=-0.0920, SD=0.3719, Mdn=-0.1134
+   Spanish: n=305, M=-0.2034, SD=0.3274, Mdn=-0.2419
+    German: n=225, M=-0.0760, SD=0.3034, Mdn=-0.0995
+
+STAR RATING DISTRIBUTION (mean probability):
+  1-star: 0.3109 (31.1%)
+  2-star: 0.1921 (19.2%)
+  3-star: 0.1291 (12.9%)
+  4-star: 0.1357 (13.6%)
+  5-star: 0.2321 (23.2%)
+
+PROCESSING TIME: 741.1 seconds
+
+OUTPUT FILES:
+  07_bert_sentiment_results.csv
+  01_bert_sentiment_kde_by_language.png
+  07_summary.txt

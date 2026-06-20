@@ -1,0 +1,16 @@
+
+SPOTIFY DATA CLEANING SUMMARY
+Generated: 2025-12-11 22:58:43
+==================================================
+
+Total rows in raw dataset: 10800
+Unique track names: 2073
+Unique artists: 672
+Unique songs (Track + Artist): 2113
+
+Columns in cleaned dataset:
+['Position', 'Track Name', 'Artist', 'Streams', 'year']
+
+This unique tracks list ensures we do not attempt to collect 
+the same song lyrics multiple times, optimizing the lyric 
+scraping process.
